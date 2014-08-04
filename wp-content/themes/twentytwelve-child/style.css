@@ -1,0 +1,225 @@
+/*
+ Theme Name:   Herfasa twentytwelve
+ Theme URI:    http://example.com/twenty-fourteen-child/
+ Description:  Twenty twelve Child Theme
+ Author:       John Doe
+ Author URI:   http://example.com
+ Template:     twentytwelve
+ Version:      1.0.0
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  twenty-twelve-child
+*/
+
+/*
+For older themes, and themes that do not use wp_enqueue_style() to enqueue their stylesheet, use the following line where twentyfourteen is the name of the directory where the theme resides:
+
+Make sure you uncomment out this import line below if you want to include the parent CSS and the wp_enqueue_style() is not working. If you do not then you will not have any styling in your child theme from the parent theme.
+*/
+
+
+/*
+@import url("../twentytwelve/style.css");
+*/
+@import "../twentytwelve/style.css";
+
+/* =Theme customization starts here
+-------------------------------------------------------------- */
+
+.float-right{
+    float: right;
+}
+
+.float-left{
+    float: left;
+}
+.grey-shadowed-box{
+    box-shadow: 2px 3px 5px 0px #e9e9e9;
+}
+
+html,body.custom-font-enabled{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 9pt;
+}
+
+html a:hover, html a.hovered, li.hovered a{
+    /*color: #0a64a4 !important;*/
+    color: #3f180b !important;
+}
+
+body{
+    margin:0px;
+    background-color: transparent;
+}
+html {
+background: url(./img/backgroundClaro2.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: #711207;
+}
+html body header#masthead{
+    margin: auto;
+    position: relative;
+    z-index: 2;
+    padding: 0px;
+}
+html.gt-1024 body header#masthead{
+    background: transparent url(./img/menu-bkg-02.png) no-repeat;
+    background-position-y: top;
+    width: 1024px;
+    min-height: 147px;
+}
+html body header#masthead a#logo{
+    position: relative;
+}
+html.gt-1024 body header#masthead a#logo{
+    left: 50px;
+    top: 10px;
+}
+html.gt-1024 body header#masthead a#logo img{
+    width: 230px;
+}
+
+html body header#masthead nav{
+    display: inline-block;
+    float: right;
+    position: relative;
+    font-family: Nunito, sans-serif;
+    font-weight: bolder;
+    font-size: 13px;
+}
+html.gt-1024 body header#masthead nav{
+    top: 59px;
+    height:37px;
+    width: 667px;
+    font-size: 13px;
+    margin: 0px;
+}
+html.gt-1024 body header#masthead nav ul{
+    position: relative;
+}
+html.gt-1024 body header#masthead nav ul li{
+    font-size: inherit;
+    margin: 0px;
+    position: static;
+    height: 42px;
+}
+html.gt-1024 body header#masthead nav ul.nav-menu > li:after{
+    content: "|";
+    color: #ffac40;
+    margin: 0px 0px;
+    font-size: 13px;
+    display: inline;
+}
+html.gt-1024 body header#masthead nav ul.nav-menu li.last-child:after{
+    content: "";
+}
+html.gt-1024 body header#masthead nav.main-navigation ul.nav-menu li.menu-item ul.sub-menu{
+    display: none;
+}
+html body header#masthead nav.main-navigation ul.nav-menu li.menu-item ul.sub-menu{
+    height: 0px;
+    overflow: hidden;
+}
+html.gt-1024 body header#masthead nav.main-navigation ul.nav-menu li.menu-item ul.sub-menu.hovered{
+    width: 725px;
+    
+    display: inline-block;
+    float: left;
+    padding-bottom: 5px;
+    padding-top: 3px;
+    top: 38px;
+    left: -68px;
+    position: absolute;
+    padding: 3px 5px 5px 5px;
+    clip: inherit;
+}
+html.rgba body header#masthead nav.main-navigation ul.nav-menu li.menu-item ul.sub-menu{
+    background-color: rgba(255,255,255, 0.1);
+}
+
+html.gt-1024 body header#masthead nav.main-navigation ul li ul.sub-menu li{
+    position: relative;
+    display: inline-table;
+    float: left;
+    width: 120px;
+    height: 154px;
+    overflow: hidden;
+    padding: 5px 20px;
+    margin: 0px 5px;
+    background-color: black;
+    border-radius: 13px;
+}
+html.rgba body header#masthead nav.main-navigation ul li ul.sub-menu li{
+    background-color: rgba(0,0,0, 0.1);
+}
+html.rgba body header#masthead nav.main-navigation ul li ul.sub-menu li:hover{
+    background-color: rgba(0,0,0, 0.3);
+}
+
+html body header#masthead nav.main-navigation ul li ul.sub-menu li a{
+    width: 118px;
+    min-height: 155px;
+    padding: 0px 2px;
+    display: table-cell;
+    text-align: center;
+    /*background-color: black;*/
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+    margin-top: 0px;
+    text-decoration: none;
+    text-transform: none;
+    line-height: normal;
+    font-size: 17px;
+    border: 0;
+    vertical-align: middle;
+}
+html body header#masthead nav.main-navigation ul li ul.sub-menu li a span{
+    font-size: 9pt;
+}
+html body header#masthead nav.main-navigation ul li ul.sub-menu li span{
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: none;
+    line-height: normal;
+    font-size: inherit;
+}
+html.rgba body header#masthead nav.main-navigation ul li ul.sub-menu li a{
+    /*background-color: rgba(0,0,0,0.1);*/
+}
+
+
+html body header#masthead nav.main-navigation ul.nav-menu > li.menu-item > a{
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+    display: inline-block;
+    padding: 1px 3px;
+    height: 24px;
+    font-size: inherit;
+    text-transform: none;
+    line-height: 32px;
+    cursor: pointer;
+}
+html body header#masthead nav li.hovered{
+    background: transparent url(./img/arrow-dwn-black.gif) no-repeat center bottom;
+}
+html body header#masthead nav li.hovered > a, html body header#masthead nav li a:hover{
+    text-shadow: 1px 0px 3px #FEAB8C;
+}
+html.gt-1024 body header#masthead > nav > ul > li > a{
+    height: 32px;
+}
+html.gt-1024 body header#masthead nav.main-navigation ul{
+    border-style: none;
+}
+html.gt-1024 body header#masthead nav.main-navigation div.menu-herfasa-nav-menu-container{
+    height: 37px;
+    z-index: 1000;
+    position: relative;
+}
+
