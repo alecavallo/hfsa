@@ -127,3 +127,6 @@ function remove_wpautop_widgetblocks_init() {
 	remove_filter( 'ww_content', 'wpautop' );
 }
 add_action( 'init', 'remove_wpautop_widgetblocks_init', 12 );
+
+
+/*ADDING BUTTONS TO THE EDITOR*/
