@@ -24,6 +24,19 @@ Make sure you uncomment out this import line below if you want to include the pa
 
 /* =Theme customization starts here
 -------------------------------------------------------------- */
+.entry-content a {
+text-decoration: none;
+color: #0a64a4!important;
+font-weight: bolder;
+}
+.entry-content a:hover{
+    text-decoration: underline;
+}
+.shadowed-box {
+   display: block;
+    box-shadow: 2px 3px 9px 1px #44120c;
+    background-color: white;
+}
 
 .float-right{
     float: right;
@@ -34,6 +47,32 @@ Make sure you uncomment out this import line below if you want to include the pa
 }
 .grey-shadowed-box{
     box-shadow: 2px 3px 5px 0px #e9e9e9;
+}
+.entry-content h2{
+    color: #0a64a4;
+    font-family: Nunito, sans-serif;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 17px;
+    border-bottom-color: #ff4500;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    line-height: 20px;
+    background-color: white;
+}
+
+.entry-content h3{
+    color: #0a64a4;
+    /*font-family: Nunito, sans-serif;*/
+    font-weight: bolder;
+    font-size: 13px;
+    margin: 3px 0px 5px 0px;
+}
+.entry-content h3 a{
+    text-decoration: none;
+    color: #0a64a4;
+    /*font-family: Nunito, sans-serif;*/
+    font-weight: bolder;
 }
 
 html,body.custom-font-enabled{
@@ -58,6 +97,20 @@ background: url(./img/backgroundClaro2.png) no-repeat center center fixed;
     background-size: cover;
     background-color: #711207;
 }
+html.chrome h3{
+    -webkit-margin-after: 0px;
+    -webkit-margin-before: 0px;
+}
+
+html.chrome h4{
+    -webkit-margin-after: 0px;
+    -webkit-margin-before: 0px;
+}
+html.lt-1280 body{
+    margin-bottom: 40px;
+}
+
+/**HEADER AND MAIN NAV BAR**/
 html body header#masthead{
     margin: auto;
     position: relative;
@@ -70,6 +123,12 @@ html.gt-1024 body header#masthead{
     width: 1024px;
     min-height: 147px;
 }
+html.lt-1280 body header#masthead{
+    background: transparent url(./img/menu-bkg-800px2.png) no-repeat;
+    background-position-y: top;
+    width: 800px;
+    min-height: 115px;
+}
 html body header#masthead a#logo{
     position: relative;
 }
@@ -77,8 +136,15 @@ html.gt-1024 body header#masthead a#logo{
     left: 50px;
     top: 10px;
 }
+html.lt-1280 body header#masthead a#logo{
+    left: -6px;
+    top: 7px;
+}
 html.gt-1024 body header#masthead a#logo img{
     width: 230px;
+}
+html.lt-1280 body header#masthead a#logo img{
+    width: 179px;
 }
 
 html body header#masthead nav{
@@ -88,52 +154,81 @@ html body header#masthead nav{
     font-family: Nunito, sans-serif;
     font-weight: bolder;
     font-size: 13px;
+    margin: 0px;
 }
 html.gt-1024 body header#masthead nav{
     top: 59px;
     height:37px;
     width: 667px;
     font-size: 13px;
-    margin: 0px;
 }
-html.gt-1024 body header#masthead nav ul{
+html.lt-1280 body header#masthead nav{
+    top: 38px;
+    height:42px;
+    width: 557px;
+    font-size: 11px;
+    display: inline-block;
+    vertical-align: middle;
+    left:0px;
+    
+}
+html body header#masthead nav ul{
     position: relative;
+    border-style: none;
 }
-html.gt-1024 body header#masthead nav ul li{
+html body header#masthead nav ul li{
     font-size: inherit;
     margin: 0px;
     position: static;
+    
+}
+html.gt-1024 body header#masthead nav ul li{
     height: 42px;
 }
-html.gt-1024 body header#masthead nav ul.nav-menu > li:after{
+html.lt-1280 body header#masthead nav ul li{
+    height: 44px;
+}
+html body header#masthead nav ul.nav-menu > li:after{
     content: "|";
     color: #ffac40;
     margin: 0px 0px;
     font-size: 13px;
     display: inline;
 }
-html.gt-1024 body header#masthead nav ul.nav-menu li.last-child:after{
+html body header#masthead nav ul.nav-menu > li:after{
+     font-size: 11px;
+}
+html body header#masthead nav ul.nav-menu li.last-child:after{
     content: "";
 }
-html.gt-1024 body header#masthead nav.main-navigation ul.nav-menu li.menu-item ul.sub-menu{
+html body header#masthead nav.main-navigation ul.nav-menu li.menu-item ul.sub-menu{
     display: none;
 }
 html body header#masthead nav.main-navigation ul.nav-menu li.menu-item ul.sub-menu{
     height: 0px;
     overflow: hidden;
 }
+html body header#masthead nav.main-navigation ul.nav-menu li.menu-item ul.sub-menu.hovered{
+    display: inline-block;
+    position: absolute;
+    clip: inherit;
+    float: left;
+}
 html.gt-1024 body header#masthead nav.main-navigation ul.nav-menu li.menu-item ul.sub-menu.hovered{
     width: 725px;
-    
-    display: inline-block;
-    float: left;
     padding-bottom: 5px;
     padding-top: 3px;
     top: 38px;
     left: -68px;
-    position: absolute;
     padding: 3px 5px 5px 5px;
-    clip: inherit;
+}
+html.lt-1280 body header#masthead nav.main-navigation ul.nav-menu li.menu-item ul.sub-menu.hovered{
+    width: 623px;
+    padding-bottom: 5px;
+    padding-top: 3px;
+    top: 38px;
+    left: -76px;
+    padding: 3px 5px 5px 5px;
 }
 html.rgba body header#masthead nav.main-navigation ul.nav-menu li.menu-item ul.sub-menu{
     background-color: rgba(255,255,255, 0.1);
@@ -145,6 +240,18 @@ html.gt-1024 body header#masthead nav.main-navigation ul li ul.sub-menu li{
     float: left;
     width: 120px;
     height: 154px;
+    overflow: hidden;
+    padding: 5px 20px;
+    margin: 0px 5px;
+    background-color: black;
+    border-radius: 13px;
+}
+html.lt-1280 body header#masthead nav.main-navigation ul li ul.sub-menu li{
+    position: relative;
+    display: inline-table;
+    float: left;
+    width: 100px;
+    height: 148px;
     overflow: hidden;
     padding: 5px 20px;
     margin: 0px 5px;
@@ -175,6 +282,12 @@ html body header#masthead nav.main-navigation ul li ul.sub-menu li a{
     font-size: 17px;
     border: 0;
     vertical-align: middle;
+}
+html.lt-1280 body header#masthead nav.main-navigation ul li ul.sub-menu li a{
+    font-size: 12px;
+}
+html.lt-1280 body header#masthead nav.main-navigation ul li ul.sub-menu li a img{
+    width:85px;
 }
 html body header#masthead nav.main-navigation ul li ul.sub-menu li a span{
     font-size: 9pt;
@@ -214,12 +327,405 @@ html body header#masthead nav li.hovered > a, html body header#masthead nav li a
 html.gt-1024 body header#masthead > nav > ul > li > a{
     height: 32px;
 }
-html.gt-1024 body header#masthead nav.main-navigation ul{
-    border-style: none;
-}
 html.gt-1024 body header#masthead nav.main-navigation div.menu-herfasa-nav-menu-container{
     height: 37px;
     z-index: 1000;
     position: relative;
 }
+/***************************************************************************************************/
 
+
+/**ARTICLE AND MAIN PAGE**/
+html.rgba body div#page{
+    background-color: transparent;
+    margin-right: auto;
+    margin-left: auto;
+    border-color: rgb(255,69,0);
+    border-style: solid;
+    border-width: 3px;
+    display: block;
+    position: relative;
+    border-radius: 5px;
+}
+html.rgba body div#page{
+    background-color: rgba(255,255,255,0.1);
+    border-color: rgba(255,69,0,0.15);
+}
+html.gt-1024 body div#page{
+    width: 979px;
+    max-width: 979px;
+    min-height: 400px;
+    padding: 20px 20px;
+    margin-bottom: 40px;    
+    //top: -24px;
+}
+html.lt-1280 body div#page{
+    width: 735px;
+    min-height: 300px;
+    padding: 20px 20px;
+    margin-bottom: 40px;    
+    //top: -24px;
+}
+html section#carrousel-section{
+    margin-bottom: 14px;
+    width: 970px;
+}
+html.lt-1280 section#carrousel-section{
+    margin-bottom: 14px;
+    width: 726px;
+}
+html div.ms-slide-info{
+    color: white;
+    margin: 2px 10px;
+}
+html body article section.left-col{
+    float: left;
+    height: 100%;
+    background-color: white;
+    /*border-color: #6d6d6d;
+    border-style: solid;
+    border-width: 1pt;*/
+}
+html.lt-1280 body article section.left-col{
+    width: 685px;
+    min-height: 360px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: block;
+}
+html.gt-1024 body article section.left-col {
+width: 591px;
+min-height: 360px;
+padding: 20px;
+}
+html body article section div.sub-col-left{
+    float: left;
+    text-align: justify;
+}
+html.gt-1024 body article section div.sub-col-left{
+    width: 285px;
+}
+html.lt-1280 body article section div.sub-col-left{
+    width: 345px;
+}
+html body article section div.sub-col-right{
+    float: right;
+    text-align: justify;
+}
+html.gt-1024 body article section div.sub-col-right{
+    width: 285px;
+}
+html.lt-1280 body article section div.sub-col-right{
+    width: 310px;
+    height: 450px;
+    overflow-y: auto;
+}
+
+/*NEWS CARROUSEL*/
+.jcarousel{
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+}
+.jcarousel ul.list-container {
+    width: 285px;
+    
+    position: relative;
+    overflow: hidden;
+
+    /* Optional, required in this case since it's a <ul> element */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+html.lt-1280 .jcarousel ul.list-container{
+    width: 345px;
+}
+.jcarousel ul li {
+    /* Required only for block elements like <li>'s */
+    float: left;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #e9e9e9;
+    box-shadow: 2px 3px 5px 0px #e9e9e9;
+    padding: 0px 5px;
+    margin: 0px 0px 15px 0px;
+}
+html.gt-1024 div.jcarousel ul li{
+    width: 268px;
+}
+html.lt-1280 div.jcarousel ul li{
+    width: 328px;
+}
+.jcarousel ul li p {
+    margin: 3px 0px 5px 0px;
+    line-height: inherit;
+}
+
+/*ASSIDE Y WIDGET SECUNDARIO*/
+html.gt-1024 aside{
+    float: right;
+    display: block;
+    position: relative;
+    width: 325px;
+    margin-right: 8px;
+}
+html.lt-1280 div#secondary{
+    width: 100%;
+}
+html.lt-1280 aside{
+    display: block;
+    width: 100%;
+    min-height: 300px;
+    float: left;
+}
+
+/*MAP STYLESHEET*/
+div#direction .controls{
+    /*margin-top: 16px;*/
+    border: 1px solid transparent;
+    border-radius: 2px 0 0 2px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    height: 32px;
+    outline: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    left: 36px!important;
+    top: 6px!important;
+    position: relative;
+    display: none;
+    opacity: 0.7;
+    /*top: 23px;
+    left: 36px;*/
+    /*position: absolute;*/
+    /*z-index: 1;*/
+}
+#floatbox-content .controls{
+    top: 6px!important;
+    border: 1px solid transparent;
+    border-radius: 2px 0 0 2px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    height: 32px;
+    outline: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    opacity: 0.7;
+}
+.controls:hover,.controls:focus{
+    opacity: 1!important;
+}
+a#max{
+    right: 0px!important;
+    bottom: 8px!important;
+    display: none;
+}
+a#max img{
+    height:22px;
+    opacity: 0.9;
+}
+input#addr{
+    width: 181px;
+}
+html.lt-1280 input#addr{
+    width: 500px;
+}
+#floatbox-content input#addr{
+    width: 360px;
+}
+html.gt-1024 div#directions-panel{
+    max-height: 430px;
+    overflow-y: scroll;
+    margin-top: 6px;
+    display:none;
+}
+html.lt-1280 div#directions-panel{
+    overflow-y: auto;
+    margin-top: 6px;
+    display:none;
+}
+
+html.gt-1024 #floatbox-content div#directions-panel{
+    max-height: none;
+    overflow-y: visible;
+}
+div#floatbox{
+    display:none;
+}
+html div#floatbox div#floatbox-container{
+    position:relative;
+    top: 50%;
+    left: 50%;
+    border: 1px solid #ccc;
+    z-index:1010;
+    background-color: white;
+}
+html.gt-1024 div#floatbox div#floatbox-container{
+    width:984px;
+    height:40em;
+    margin-top: -17em; /*set to a negative number 1/2 of your height*/
+    margin-left: -492px; /*set to a negative number 1/2 of your width*/
+}
+html.lt-1280 div#floatbox div#floatbox-container{
+    width: 798px;
+    height: 46em;
+    margin-top: -28em; /*set to a negative number 1/2 of your height*/
+    margin-left: -400px; /*set to a negative number 1/2 of your width*/
+}
+html div#floatbox div#floatbox-container div#floatbox-controls{
+    float: right;
+    margin: 3px 10px;
+    font-weight: bolder;
+    
+}
+html div#floatbox div#floatbox-container div#floatbox-controls a{
+    color: #303030;
+    text-decoration: none;
+}
+html div#floatbox div#floatbox-container div#floatbox-content{
+    margin: 25px 20px;
+    overflow-y: auto;
+}
+html.gt-1024 div#floatbox div#floatbox-container div#floatbox-content{
+    height: 37em;
+}
+html.lt-1280 div#floatbox div#floatbox-container div#floatbox-content{
+    height: 37em;
+}
+html.gt-1024 div#floatbox div#floatbox-container div#floatbox-content div#map{
+    height: 30em;
+}
+html.lt-1280 div#floatbox div#floatbox-container div#floatbox-content div#map{
+    height: 30em;
+}
+html div#floatbox div#floatbox-container div#floatbox-content div#directions-panel{
+    min-height: 7em;
+}
+.overlay{
+    background-color: rgba(68,18,12,0.8);
+    /*opacity:0.8;*/
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+    z-index:1000;
+}
+
+.entry-content aside h2, div.widget-area aside h2{
+    color: #0a64a4;
+    font-family: Nunito, sans-serif;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 17px;
+    border-bottom-color: #ff4500;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    line-height: 30px;
+    background-color: white;
+    display: block;
+    margin: 0px;
+}
+html aside div#map{
+    background-color: white;
+}
+html.gt-1024 aside div#map{
+    width: 100%;
+    height: 350px;
+}
+html.lt-1280 aside div#map{
+    width: 100%;
+    height: 300px;
+}
+html aside div.important-box{
+    background-color: white;
+    width: 100%;
+    padding: 5px 0px;
+    margin: 7px 0px;
+    z-index: 4;
+}
+html.gt-1024 aside div.important-box{
+    min-height: 100px;
+}
+html aside div.important-box p{
+    margin: 3px 10px;
+    text-align: justify;
+}
+/*fix para evitar el p extra en el asside*/
+#direction > p:nth-child(2), #direction > p:nth-child(4){
+    display: none;
+}
+
+/*herfasa layout*/
+div.herasa-main-column{
+    padding: 5px 15px;
+    width:631px;
+    box-sizing: border-box;
+}
+html.lt-1280 div.herasa-main-column{
+    width:100%;
+}
+
+/*Subpage Article Listing*/
+div.article-listing{
+    float: left;
+    width: 158px;
+    min-height: 140px;
+    padding: 10px 10px;
+    border-color: #e9e9e9;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 2px 3px 5px 0px #e9e9e9;
+    margin: 0px 20px 20px 0px;
+}
+div.article-listing:hover{
+    box-shadow: 2px 3px 5px 0px #e9c2c2;
+}
+html.lt-1280 div.article-listing{
+    
+}
+div.article-listing p{
+    width: 520px;
+    display: block;
+    float: left;
+    text-align: justify;
+}
+html.lt-1280 div.article-listing p{
+    width: 620px;
+}
+div.article-listing img{
+    display: block;
+    width: 110px;
+    margin: auto;
+    margin-bottom:  4px;
+}
+article.page > div.entry-content > section > table{
+    border: 1px solid #ededed;
+    box-shadow: 2px 3px 5px 0px #e9e9e9
+}
+article.page > div.entry-content > section > table tr td{
+    border: 1px solid #ededed;
+    padding: 10px;
+    font-size: 9pt;
+    line-height: 9pt;
+    padding: 3px;
+}
+
+/*FOOTER*/
+footer[role="contentinfo"] {
+height: 10px;
+clear: both;
+font-size: 12px;
+font-size: 0.857142857rem;
+line-height: 10px;
+max-width: 100%;
+margin-top: 24px;
+margin-top: 1.714285714rem;
+padding: 15px 30px;
+background-color: black;
+color: white;
+border-style: none;
+}
+html.rgba footer[role="contentinfo"] {
+    background-color: rgba(0,0,0,0.8);
+}
