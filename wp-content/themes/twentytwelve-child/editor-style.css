@@ -1,0 +1,51 @@
+/** These styles are used in your backend editor. **/
+.shadowed-box {
+   display: block;
+    box-shadow: 2px 3px 9px 1px #44120c;
+    background-color: white;
+}
+section.right-col {
+width: 600px;
+min-height: 360px;
+padding: 20px;
+}
+div.sub-col-left{
+    float: left;
+    text-align: justify;
+}
+html.gt-1024 div.sub-col-left{
+    width: 285px;
+}
+div.sub-col-right{
+    float: right;
+    text-align: justify;
+}
+html.gt-1024 div.sub-col-right{
+    width: 285px;
+}
+h2{
+    color: #0a64a4;
+    font-family: Nunito, sans-serif;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 17px;
+    border-bottom-color: #ff4500;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    line-height: 20px;
+    background-color: white;
+}
+
+h3{
+    color: #0a64a4;
+    /*font-family: Nunito, sans-serif;*/
+    font-weight: bolder;
+    font-size: 13px;
+    margin: 3px 0px 5px 0px;
+}
+h3 a{
+    text-decoration: none;
+    color: #0a64a4;
+    /*font-family: Nunito, sans-serif;*/
+    font-weight: bolder;
+}
