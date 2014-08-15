@@ -43,3 +43,18 @@ function tabbed_img_btn_css() {
 }
 
 add_action('admin_enqueue_scripts', 'tabbed_img_btn_css');
+
+function tabbed_img_links_shortcode($atts){
+    remove_filter( 'the_content', 'wpautop' );
+    $a = shortcode_atts(array(
+        'href'=>"javascript:void(0)",
+        'img'=>"img/empty.png",
+        'text'=>""
+    ), $atts);
+    if(empty($a['href'])){
+        $a['href']="javascript:void(0)";
+    }
+    $html = "<a href=\"{$a['href']}\" class=\"pepe\"> <div class=\"article-listing\"> <img src=\"{$a['img']}\"/> <h4>{$a['text']}</h4> </div> </a>";
+    return "<div class=\"matrix-container\">".$html."</div>";
+}
+add_shortcode( 'tabbed_img_links', 'tabbed_img_links_shortcode' );
