@@ -14,7 +14,14 @@
                     {
                         type: 'textbox',
                         name: 'img',
+                        id: 'img',
                         label: 'URL Imágen'
+                    },
+                    {
+                        type: 'button',
+                        text: 'Seleccionar',
+                        id: 'img_btn',
+                        size: 'small'
                     },
                     {
                         type: 'textbox',
@@ -24,6 +31,16 @@
                     onsubmit: function( e ) {
                         editor.insertContent('[tabbed_img_links href="'+e.data.link+'" img="'+e.data.img+'" text="'+e.data.txt+'"]');
                     }
+                });
+                
+                jQuery('div#img_btn button').click(function(){
+                    wp.media.editor.send.attachment = function(props, attachment){
+                    jQuery('input#img').val(attachment.url);
+                }
+
+                wp.media.editor.open(this);
+
+                return false;
                 });
             }
         });
