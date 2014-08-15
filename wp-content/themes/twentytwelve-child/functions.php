@@ -30,20 +30,7 @@ function load_ui_js_loader(){
 add_action( 'wp_enqueue_scripts', 'load_ui_js_loader' );
 
 
-function tabbed_img_links_shortcode($atts){
-    remove_filter( 'the_content', 'wpautop' );
-    $a = shortcode_atts(array(
-        'href'=>"javascript:void(0)",
-        'img'=>"img/empty.png",
-        'text'=>""
-    ), $atts);
-    if(empty($a['href'])){
-        $a['href']="javascript:void(0)";
-    }
-    $html = "<a href=\"{$a['href']}\" class=\"pepe\"> <div class=\"article-listing\"> <img src=\"{$a['img']}\"/> <h4>{$a['text']}</h4> </div> </a>";
-    return "<div class=\"matrix-container\">".$html."</div>";
-}
-add_shortcode( 'tabbed_img_links', 'tabbed_img_links_shortcode' );
+
 
 function remove_wpautop_widgetblocks_init() {
 	remove_filter( 'ww_content', 'wpautop' );
