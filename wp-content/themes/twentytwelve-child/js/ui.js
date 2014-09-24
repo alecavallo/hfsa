@@ -76,6 +76,29 @@ jQuery(document).ready(function(){
         
        
     });
+    
+    var menuItemWidth = jQuery('html.gt-1024 body header#masthead nav.main-navigation ul li ul.sub-menu li').width();
+    var menuItemHeight = jQuery('html.gt-1024 body header#masthead nav.main-navigation ul li ul.sub-menu li').height();
+    var menuItemLeftMargin = parseInt(jQuery('html.gt-1024 body header#masthead nav.main-navigation ul li ul.sub-menu li').css('marginLeft'));
+    var menuItemRightMargin = parseInt(jQuery('html.gt-1024 body header#masthead nav.main-navigation ul li ul.sub-menu li').css('marginRight'));
+    var menuItemNewMargin = menuItemLeftMargin-(120-menuItemWidth)/2;
+    console.log(menuItemNewMargin);
+    
+    jQuery('html.gt-1024 body header#masthead nav.main-navigation ul li ul.sub-menu li').hover(function(){
+        jQuery(this).animate({
+            width:120,
+            height:154,
+            marginLeft: menuItemNewMargin+'px',
+            marginRight: menuItemNewMargin+'px'
+        },"fast");
+    },function(){
+        jQuery(this).animate({
+            width:menuItemWidth,
+            height:menuItemHeight,
+            marginLeft: menuItemLeftMargin+'px',
+            marginRight: menuItemRightMargin+'px'
+        },"fast");
+    });
 });
 
 
@@ -97,7 +120,7 @@ jQuery(document).ready(function(){
 
         $('.jcarousel').jcarouselAutoscroll({
             target: '+=1',
-            interval: 2000,
+            interval: 4000,
             autostart: true
         });
     });

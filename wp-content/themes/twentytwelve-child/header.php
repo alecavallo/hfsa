@@ -20,6 +20,7 @@
 <!--<![endif]-->
 <head>
     
+    <meta name="viewport" content="initial-scale=1, maximum-scale=2">
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="width=device-width" />
 <title><?php wp_title( '|', true, 'right' ); ?></title>
@@ -29,8 +30,9 @@
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700|Nunito:400,700' rel='stylesheet' type='text/css'>
 <script type="text/javascript" src="<?=includes_url()?>/js/headjs/head.min.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700|Yanone+Kaffeesatz:700' rel='stylesheet' type='text/css'>
+
 
 <?php wp_head(); ?>
 </head>
