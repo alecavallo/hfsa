@@ -64,7 +64,7 @@ article section div.rotate-container{
 /* How pronounced should the 3D effects be */
 perspective: 800px;
 -webkit-perspective: 800px;
-background: radial-gradient(#e0e0e0, #aaa);
+background: radial-gradient(#e0e0e0, #f7eeee);
 width: 220px;
 height: 380px;
 /* margin: 0 auto; */
