@@ -6,7 +6,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="site-content shadowed-box herasa-main-column">
+	<div id="primary" class="site-content shadowed-box herfasa-main-column">
 		<div id="content" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>

@@ -42,5 +42,14 @@ function remove_wpautop_widgetblocks_init() {
 }
 add_action( 'init', 'remove_wpautop_widgetblocks_init', 12 );
 
+// AÑADIR FIRMA AL FINAL DE LA WEB
+function custom_footer_text()
+{
+$content = '<div style="float:left">© 2014 Aberturas Herfasa S.A. - <a href="/terminos-y-condiciones">Términos y condiciones</a></div><div style="float:right">Desarrollado por: <a href="https://www.facebook.com/sis.soluciones.it" target="_blank">SIS</a></div>';
+echo $content;
+}
+add_action( 'wp_footer', 'custom_footer_text' );
+
+
 
 /*ADDING BUTTONS TO THE EDITOR*/

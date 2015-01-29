@@ -24,10 +24,18 @@ Make sure you uncomment out this import line below if you want to include the pa
 
 /* =Theme customization starts here
 -------------------------------------------------------------- */
+
 p,a,strong,b,i,em,table{
     text-shadow: 1px 2px 3px rgba(0,0,0,0.7);
 }
-.entry-content a {
+p{
+    text-align: justify;
+    text-justify:  distribute;
+}
+.widget-area aside.widget{
+    margin-bottom: auto;
+}
+.entry-content a, div.wrapper a {
 text-decoration: none;
 color: #FF5400!important;
 font-weight: bolder;
@@ -49,7 +57,26 @@ background-color: rgba(255,255,255,0.1);
     box-shadow: 2px 3px 9px 1px #44120c;
     /*background-color: white;*/
 }
-
+aside.shadowed-box{
+    color: white;
+    background-color: rgba(66,14,14,0.68);
+    min-height: 100px;
+    padding: 5px 0px;
+    width: 325px;
+    z-index: 4;
+    margin: 2px 0px;
+    margin-right: 8px;
+}
+aside.shadowed-box div{
+    margin: 3px 10px;
+}
+aside.shadowed-box div ul li a{
+    text-shadow: 1px 2px 3px rgba(0,0,0,0.7);
+    text-decoration: none;
+}
+aside.shadowed-box div ul li a:hover{
+    text-decoration: underline;
+}
 .float-right{
     float: right;
 }
@@ -60,7 +87,7 @@ background-color: rgba(255,255,255,0.1);
 .grey-shadowed-box{
     box-shadow: 2px 3px 5px 0px #e9e9e9;
 }
-.entry-content h2, .entry-content aside h2, div.widget-area aside h2{
+.entry-content h2, .entry-content aside h2, div.widget-area aside h2, #content header h2.archive-title{
     color: #ffffff;
     font-family: 'Yanone Kaffeesatz', sans-serif;
     letter-spacing: 1px;
@@ -79,6 +106,10 @@ background-color: rgba(255,255,255,0.1);
     display: block;
     margin: 0px;
     margin-bottom: 4px;
+    
+}
+html.gt-1024 .entry-content aside h2, html.gt-1024 div.widget-area aside h2{
+    padding-top: 42px;
 }
 
 .entry-content h3{
@@ -183,10 +214,14 @@ html body header#masthead nav{
     font-family: 'Yanone Kaffeesatz', sans-serif;
     font-variant: small-caps;
     letter-spacing: 2px;
-    font-size: 13px;
+    font-size: 19px!important;
+    text-rendering: optimizeLegibility;
     margin: 0px;
     top: 59px;
     height:37px;
+}
+html.ie body header#masthead nav, html.ie body header#masthead nav ul li, html.ie body header#masthead nav ul li a{
+    font-size: 16px!important;
 }
 html.gt-1024 body header#masthead nav{
     top: 59px;
@@ -302,8 +337,10 @@ html.rgba body header#masthead nav.main-navigation ul li ul.sub-menu li:hover{
 }
 
 html body header#masthead nav.main-navigation ul li ul.sub-menu li a{
-    width: 8.78vw;
-    height: 40.5vh;
+    /*width: 8.78vw;
+    height: 40.5vh;*/
+    width: 117px;
+    height: 150px;
     padding: 0px 2px;
     display: inline-block;
     text-align: center;
@@ -318,6 +355,11 @@ html body header#masthead nav.main-navigation ul li ul.sub-menu li a{
     font-size: 17px;
     border: 0;
     vertical-align: middle;
+}
+ul.sub-menu li.menu-item a img.wp-post-image{
+    clear: both;
+    margin: auto;
+    display: block;
 }
 html.lt-1280 body header#masthead nav.main-navigation ul li ul.sub-menu li a{
     font-size: 0.93vw;
@@ -361,7 +403,7 @@ html body header#masthead nav li > a, html body header#masthead nav li a{
     text-shadow: 0px 1px 1px #000
 }
 html body header#masthead nav li.hovered > a, html body header#masthead nav li a:hover{
-    text-shadow: 0px 2px 1px #000, 1px 3px 5px #C7E91D;
+    text-shadow: 0px 2px 1px #000, 0px 1px 17px #fff;
 }
 html.gt-1024 body header#masthead > nav > ul > li > a{
     height: 32px;
@@ -422,6 +464,7 @@ html body article section.left-col{
     height: 100%;
     background-color: rgba(66, 14, 14, 0.68);
     color: white;
+    box-sizing: border-box;
     /*border-color: #6d6d6d;
     border-style: solid;
     border-width: 1pt;*/
@@ -434,13 +477,14 @@ html.lt-1280 body article section.left-col{
     display: block;
 }
 html.gt-1024 body article section.left-col {
-width: 591px;
-min-height: 360px;
+width: 630px;
+min-height: 538px;
 padding: 20px;
 }
 html body article section div.sub-col-left{
     float: left;
     text-align: justify;
+    height: 538px;
 }
 html.gt-1024 body article section div.sub-col-left{
     width: 285px;
@@ -465,7 +509,7 @@ html.lt-1280 body article section div.sub-col-right{
 .jcarousel{
     position: relative;
     overflow: hidden;
-    height: 400px;
+    height: 466px;
 }
 .jcarousel ul.list-container {
     width: 285px;
@@ -700,15 +744,29 @@ html aside div.important-box p{
 }
 
 /*herfasa layout*/
-div.herasa-main-column{
-    padding: 5px 15px;
+div#main{
+    padding-bottom: 20px;
+}
+div.herfasa-main-column, section#primary{
+    padding: 18px 15px;
     width:631px;
     box-sizing: border-box;
 }
-html.rgba div.herasa-main-column{
+section#primary{
+    box-shadow: 2px 3px 9px 1px #44120c;
     background-color: rgba(66,14,14,0.68);
+    min-height: 672px
 }
-html.lt-1280 div.herasa-main-column{
+div#primary{
+    /*padding: 0px 15px 0px 15px;
+    box-sizing: border-box;*/
+    min-height: 672px;
+}
+html.rgba div.herfasa-main-column{
+    background-color: rgba(66,14,14,0.68);
+    min-height: 672px;
+}
+html.lt-1280 div.herfasa-main-column{
     width:100%;
 }
 
@@ -721,16 +779,23 @@ div.article-listing{
     width: 158px;
     min-height: 140px;
     padding: 10px 10px;
-    /*border-color: #e9e9e9;
-    border-style: solid;
-    border-width: 1px;*/
-    /*box-shadow: 2px 3px 5px 0px #e9e9e9;*/
-    box-shadow: 2px 2px 5px 0px rgba(233,233,233,0.34);
-    background-color: rgba(255,255,255,0.1);
+    /*box-shadow: 2px 2px 5px 0px rgba(233,233,233,0.34);
+    background-color: rgba(255,255,255,0.1);*/
     margin: 0px 20px 20px 0px;
+    
+    
+    overflow: hidden;
+    background-color: rgba(69, 20, 9, 0.7);
+    background-clip: padding-box;
+    border: 1px solid;
+    border-color: rgb(109, 32, 15) rgba(69, 20, 9, 0.5) rgba(69, 20, 9, 0.7);
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.4), 0 1px 2px rgba(0, 0, 0, 0.2);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0) 40%, rgba(0, 0, 0, 0.12) 50%, rgba(0, 0, 0, 0.04));
+    border-collapse: separate;
 }
 div.article-listing:hover{
-    box-shadow: 2px 2px 1px 1px rgba(0,0,0,0.10),2px 2px 6px 0px rgba(233,233,233,0.50);
+    background-color: rgba(91,24,8,0.7);
 }
 html.lt-1280 div.article-listing{
     
@@ -751,15 +816,94 @@ div.article-listing img{
     margin-bottom:  4px;
 }
 article.page > div.entry-content > section > table{
-    border: 1px solid #ededed;
-    box-shadow: 2px 3px 5px 0px #e9e9e9
+    /*border: 1px solid #ededed;
+    box-shadow: 2px 3px 5px 0px #e9e9e9;*/
+    overflow: hidden;
+    text-align: center;
+    background-color: rgba(69, 20, 9, 0.7);
+    background-clip: padding-box;
+    border: 1px solid;
+    border-color: rgb(109, 32, 15) rgba(69, 20, 9, 0.5) rgba(69, 20, 9, 0.7);
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.4), 0 1px 2px rgba(0, 0, 0, 0.2)!important;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0) 40%, rgba(0, 0, 0, 0.12) 50%, rgba(0, 0, 0, 0.04));
+    border-collapse: separate;
+    padding: 10px;
 }
 article.page > div.entry-content > section > table tr td{
-    border: 1px solid #ededed;
+    /*border: 1px solid #ededed;
     padding: 10px;
     font-size: 9pt;
     line-height: 9pt;
-    padding: 3px;
+    padding: 3px;*/
+    border-bottom: 1px solid rgba(59, 16, 6, 0.35);
+    border-right: 1px solid rgba(59, 16, 6, 0.25);
+    border-top: none;
+    padding: 10px;
+    font-size: 9pt;
+    line-height: 9pt;
+    padding: 3px 10px;
+}
+
+article.page > div.entry-content > section > table tr > td:first-child {
+    text-align: right;
+}
+article.page > div.entry-content > section > table tr > td:last-child {
+border-right: none !important;
+text-align: left;
+}
+article.page > div.entry-content > section > table tr:last-child td {
+border-bottom: none !important;
+}
+
+/*posts format*/
+article.format-aside .aside, article.post > .entry-content {
+    padding: 24px 24px 0;
+    padding: 1.714285714rem;
+    box-sizing: border-box;
+}
+
+html.rgba article.format-aside .aside, html.rgba article.post > .entry-content {
+    background: rgba(233,233,233,0.10);
+    box-shadow: 1px 1px 5px 0px rgba(233,233,233,0.34);
+    border-left: 22px solid rgba(255, 84, 0, 0.45);
+}
+div#primary > div#content > article.format-aside > div.aside{
+    width: 87%;
+    margin: auto;
+    margin-top: 10px;
+}
+div#primary > div#content > article.format-link{
+    padding: 15px;
+}
+div#primary > div#content > article.format-image{
+    padding: 15px;
+}
+div#primary > div#content > article.format-link > div.entry-content{
+    max-width: 80%;
+}
+
+article.format-aside p{
+    color: white;
+    text-shadow: 1px 2px 3px rgba(0,0,0,0.7);
+}
+
+article.format-aside .aside {
+padding: 24px 24px 0;
+padding: 1.714285714rem;
+background: #d2e0f9;
+border-left: 22px solid #a8bfe8;
+}
+
+.white-shadowed-box{
+    padding: 5px;
+    box-sizing: border-box;
+    margin: 0px 0px 15px 0px;
+    text-shadow: 1px 2px 3px rgba(0,0,0,0.7);
+}
+html.rgba .white-shadowed-box{
+    box-shadow: 1px 1px 5px 0px rgba(233,233,233,0.34);
+    background-color: rgba(255,255,255,0.1);
 }
 
 /*FOOTER*/
@@ -778,7 +922,12 @@ color: white;
 border-style: none;
 }
 html.rgba footer[role="contentinfo"] {
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(66,14,14,0.80);
+    box-shadow: 0px -4px 20px rgba(66,14,14,0.80);
+    position: relative;
+}
+footer[role="contentinfo"] a{
+    color: wheat;
 }
 
 /*MASTER SLIDER */

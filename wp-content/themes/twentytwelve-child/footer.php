@@ -14,8 +14,9 @@
 </div><!-- #page -->
 <footer id="colophon" role="contentinfo">
     <div class="site-info">
-            <?php do_action( 'twentytwelve_credits' ); ?>
-            <a href="<?php echo esc_url( __( 'http://wordpress.org/', 'twentytwelve' ) ); ?>" title="<?php esc_attr_e( 'Semantic Personal Publishing Platform', 'twentytwelve' ); ?>"><?php printf( __( 'Proudly powered by %s', 'twentytwelve' ), 'WordPress' ); ?></a>
+            <?php /*do_action( 'twentytwelve_credits' ); ?>
+            <a href="<?php echo esc_url( __( 'http://wordpress.org/', 'twentytwelve' ) ); ?>" title="<?php esc_attr_e( 'Semantic Personal Publishing Platform', 'twentytwelve' ); ?>"><?php printf( __( 'Proudly powered by %s', 'twentytwelve' ), 'WordPress' ); ?></a>*/?>
+            <?php wp_footer(); ?>
     </div><!-- .site-info -->
 </footer><!-- #colophon -->
 <div id="floatbox" class="overlay">
@@ -27,6 +28,6 @@
     </div>
 </div>
 
-<?php wp_footer(); ?>
+
 </body>
 </html>
