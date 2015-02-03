@@ -405,9 +405,16 @@ html body header#masthead nav li > a, html body header#masthead nav li a{
     text-shadow: 0px 1px 1px #000
 }
 html body header#masthead nav.main-navigation li.hovered > a, html body header#masthead nav.main-navigation ul.nav-menu li.menu-item a:hover{
-    text-shadow: 0px 2px 1px #000, 0px 2px 17px #fff;
+    text-shadow: 0px 2px 1px #000, 0px -3px 10px #fff;
     background-color: rgba(255,255,255,0.07);
 }
+html.rgba body header#masthead nav.main-navigation li.hovered > a, html.rgba body header#masthead nav.main-navigation ul.nav-menu li.menu-item a:hover{
+    background: -webkit-linear-gradient(bottom, rgba(255,255,255,0.2) 3%, rgba(255,255,255,0.01) 70%); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom, rgba(255,255,255,0.2) 3%, rgba(255,255,255,0.01) 70%); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom, rgba(255,255,255,0.2) 3%, rgba(255,255,255,0.01) 70%); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(bottom, rgba(255,255,255,0.2) 3%, rgba(255,255,255,0.01) 70%); /* Standard syntax */
+}
+
 html.gt-1024 body header#masthead > nav > ul > li > a{
     height: 32px;
 }
