@@ -181,7 +181,7 @@ html.gt-1024 body header#masthead{
     background: transparent url(./img/menu-bkg-02.png) no-repeat;
     background-position-y: top;
     width: 1024px;
-    min-height: 147px;
+    min-height: 112px;
 }
 html.lt-1280 body header#masthead{
     background: transparent url(./img/menu-bkg-800px2.png) no-repeat;
@@ -191,17 +191,18 @@ html.lt-1280 body header#masthead{
 }
 html body header#masthead a#logo{
     position: relative;
+    float: left;
 }
 html.gt-1024 body header#masthead a#logo{
-    left: 50px;
-    top: 10px;
+    left: 0px;
+    top: 8px;
 }
 html.lt-1280 body header#masthead a#logo{
     left: -6px;
     top: 7px;
 }
 html.gt-1024 body header#masthead a#logo img{
-    width: 230px;
+    width: 190px;
 }
 html.lt-1280 body header#masthead a#logo img{
     width: 179px;
@@ -209,7 +210,7 @@ html.lt-1280 body header#masthead a#logo img{
 
 html body header#masthead nav{
     display: inline-block;
-    float: right;
+    float: left;
     position: relative;
     font-family: 'Yanone Kaffeesatz', sans-serif;
     font-variant: small-caps;
@@ -219,12 +220,13 @@ html body header#masthead nav{
     margin: 0px;
     top: 59px;
     height:37px;
+    left: 46px;
 }
 html.ie body header#masthead nav, html.ie body header#masthead nav ul li, html.ie body header#masthead nav ul li a{
     font-size: 16px!important;
 }
 html.gt-1024 body header#masthead nav{
-    top: 59px;
+    top: 40px;
     height:37px;
     width: 667px;
     font-size: 17px;
@@ -390,7 +392,7 @@ html body header#masthead nav.main-navigation ul.nav-menu > li.menu-item > a{
     text-decoration: none;
     display: inline-block;
     padding: 1px 3px;
-    height: 24px;
+    height: 28px;
     font-size: inherit;
     text-transform: none;
     line-height: 32px;
@@ -402,8 +404,9 @@ html body header#masthead nav li.hovered{
 html body header#masthead nav li > a, html body header#masthead nav li a{
     text-shadow: 0px 1px 1px #000
 }
-html body header#masthead nav li.hovered > a, html body header#masthead nav li a:hover{
-    text-shadow: 0px 2px 1px #000, 0px 1px 17px #fff;
+html body header#masthead nav.main-navigation li.hovered > a, html body header#masthead nav.main-navigation ul.nav-menu li.menu-item a:hover{
+    text-shadow: 0px 2px 1px #000, 0px 2px 17px #fff;
+    background-color: rgba(255,255,255,0.07);
 }
 html.gt-1024 body header#masthead > nav > ul > li > a{
     height: 32px;
