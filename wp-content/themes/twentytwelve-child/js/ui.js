@@ -30,24 +30,27 @@ function minimize(){
 var submenu;
 jQuery(document).ready(function(){ 
     jQuery('header nav.main-navigation > div > ul.nav-menu > li.menu-item > a').hover(function(){
+        //jQuery(submenu).hide();
         submenu = jQuery(this).next('ul');
         jQuery('li.menu-item ul.submenu').hide();
         jQuery(submenu).width(0);
         jQuery(submenu).height(0);
-        jQuery(this).next('ul').show();
+        jQuery(submenu).show();
         jQuery(submenu).animate({height:"162px"}, 250);
         jQuery(submenu).animate({width:"840px"}, 100);
         
     },function(){
-        return true;
+        return false;
     });
     jQuery('header').hover(
         function(){
             return true;
         }, function(){
-            console.log('Header loose focus');
+            //jQuery(submenu).width(840).height(162);
+            jQuery(submenu).animate({width:"0px"}, 50);
+            jQuery(submenu).animate({height:"0px"}, 50);
             jQuery(submenu).hide();
-        })
+        });
 });
 
 
