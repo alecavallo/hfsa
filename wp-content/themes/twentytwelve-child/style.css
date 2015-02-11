@@ -185,10 +185,11 @@ html.gt-1024 body header#masthead{
     margin-top: 5px;
 }
 html.lt-1280 body header#masthead{
-    background: transparent url(./img/menu-bkg-800px2.png) no-repeat;
+    background: transparent url(./img/menu-bkg-02.png) no-repeat;
     background-position-y: top;
-    width: 800px;
-    min-height: 115px;
+    width: 1000px;
+    min-height: 112px;
+    margin-top: 5px;
 }
 html body header#masthead a#logo{
     position: relative;
@@ -199,14 +200,14 @@ html.gt-1024 body header#masthead a#logo{
     top: 8px;
 }
 html.lt-1280 body header#masthead a#logo{
-    left: -6px;
-    top: 7px;
+    left: 0px;
+    top: 8px;
 }
 html.gt-1024 body header#masthead a#logo img{
     width: 190px;
 }
 html.lt-1280 body header#masthead a#logo img{
-    width: 179px;
+    width: 190px;
 }
 
 html body header#masthead nav{
@@ -233,13 +234,13 @@ html.gt-1024 body header#masthead nav{
     font-size: 17px;
 }
 html.lt-1280 body header#masthead nav{
-    top: 38px;
-    height:42px;
-    width: 557px;
-    font-size: 14px;
-    display: inline-block;
+    top: 40px;
+    height:37px;
+    width: 667px;
+    font-size: 17px!important;
+    /*display: inline-block;
     vertical-align: middle;
-    left:0px;
+    left:0px;*/
     
 }
 html body header#masthead nav ul{

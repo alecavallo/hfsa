@@ -36,8 +36,14 @@ jQuery(document).ready(function(){
         jQuery(submenu).width(0);
         jQuery(submenu).height(0);
         jQuery(submenu).show();
-        jQuery(submenu).animate({height:"162px"}, 250);
-        jQuery(submenu).animate({width:"840px"}, 100);
+        if(jQuery('html').hasClass('gt-1024')){
+            jQuery(submenu).animate({height:"162px"}, 250);
+            jQuery(submenu).animate({width:"840px"}, 100);
+        }else{
+            jQuery(submenu).animate({height:"162px"}, 250);
+            jQuery(submenu).animate({width:"707px"}, 100);
+        }
+        
         
     },function(){
         return false;
