@@ -305,7 +305,7 @@ html.rgba body header#masthead nav.main-navigation ul.nav-menu li.menu-item ul.s
     background: -webkit-linear-gradient(left, rgba(0,0,0,0.4) , rgba(255,255,255,0.1)); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(right, rgba(0,0,0,0.4) , rgba(255,255,255,0.1)); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(right, rgba(0,0,0,0.4) , rgba(255,255,255,0.1)); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to right, rgba(0,0,0,0.9) , rgba(0,0,0,0.8) 20%, rgba(0,0,0,0.7) 70%, rgba(241,290,36,0.1)); /* Standard syntax */
+    background: linear-gradient(to right, rgba(10,10,10,1) , rgba(10,10,10,0.9) 20%, rgba(10,10,10,0.8) 70%, rgba(241,290,36,0.15)); /* Standard syntax */
     /*border-radius: 0px 0px 5px 5px;*/
     border-left: 15px solid rgb(0,0,0);
     width:840px;

@@ -30,11 +30,13 @@ function minimize(){
 var submenu;
 jQuery(document).ready(function(){ 
     jQuery('header nav.main-navigation > div > ul.nav-menu > li.menu-item > a').hover(function(){
-        console.log(jQuery(this).next('ul').html());
         submenu = jQuery(this).next('ul');
         jQuery('li.menu-item ul.submenu').hide();
         jQuery(submenu).width(0);
+        jQuery(submenu).height(0);
         jQuery(this).next('ul').show();
+        jQuery(submenu).animate({height:"162px"}, 250);
+        jQuery(submenu).animate({width:"840px"}, 100);
         
     },function(){
         return true;
