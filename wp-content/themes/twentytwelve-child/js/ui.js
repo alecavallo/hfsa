@@ -33,6 +33,7 @@ jQuery(document).ready(function(){
         console.log(jQuery(this).next('ul').html());
         submenu = jQuery(this).next('ul');
         jQuery('li.menu-item ul.submenu').hide();
+        jQuery(submenu).width(0);
         jQuery(this).next('ul').show();
         
     },function(){

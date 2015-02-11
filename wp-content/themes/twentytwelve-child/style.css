@@ -307,7 +307,7 @@ html.rgba body header#masthead nav.main-navigation ul.nav-menu li.menu-item ul.s
     background: -moz-linear-gradient(right, rgba(0,0,0,0.4) , rgba(255,255,255,0.1)); /* For Firefox 3.6 to 15 */
     background: linear-gradient(to right, rgba(0,0,0,0.9) , rgba(0,0,0,0.8) 20%, rgba(0,0,0,0.7) 70%, rgba(241,290,36,0.1)); /* Standard syntax */
     /*border-radius: 0px 0px 5px 5px;*/
-    border-left: 16px solid rgb(0,0,0);
+    border-left: 15px solid rgb(0,0,0);
     width:840px;
     height: 162px;
     position: absolute;
