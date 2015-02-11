@@ -26,82 +26,25 @@ function minimize(){
     map.setCenter(lastCenter);
 } 
 
+//menu
+var submenu;
 jQuery(document).ready(function(){ 
-    jQuery("ul.nav-menu > li.menu-item > a").click(function(evt){
-        var element = jQuery(this).parent();
-       //console.log(element.attr('class').split(' ')[0]);
-       if(jQuery(element).hasClass('hovered')){
-           jQuery(element).children('ul').animate({height:'0px'},200,function(){
-               jQuery(element).children('ul').hide();
-               jQuery(element).removeClass('hovered');
-               jQuery(element).children('ul').removeClass('hovered');
-           });
-           jQuery('div#page').animate({top:'0px'},{ duration: 200, queue: false });
-           jQuery('footer#colophon').animate({top:'0px'},{ duration: 200, queue: false });
-           
-           return true;
-       }
-       jQuery('ul.nav-menu > li.menu-item').removeClass('hovered');
-       var submenuDeployed = jQuery('ul.nav-menu > li.menu-item > ul').length > 0;
-       jQuery('ul.nav-menu > li.menu-item > ul').removeClass('hovered');
-       jQuery('ul.nav-menu > li.menu-item > ul').hide();
-       jQuery('ul.nav-menu > li.menu-item > ul').css('height','0px');
-       jQuery(element).addClass('hovered');
-       jQuery(element).children('ul').addClass('hovered');
-       
-       //console.log(jQuery('li.menu-item > ul.submenu.hovered').length);
-       
-        jQuery(element).children('ul').show();
-        if(submenuDeployed == true){
-            if(jQuery("html").hasClass('gt-1024')){
-                jQuery(element).children('ul').animate({height:'170px'},{ duration: 100, queue: false });
-            }else{
-                jQuery(element).children('ul').animate({height:'155px'},{ duration: 100, queue: false });
-            }
-            jQuery(element).children('ul > li').animate({opacity:'0.99'},{ duration: 100, queue: false });
-            if(jQuery(element).children('ul').length > 0 ){
-                jQuery('div#page').animate({top:'130px'},{ duration: 100, queue: false });
-                jQuery('footer#colophon').animate({top:'130px'},{ duration: 100, queue: false });
-            }
-        }else{
-            if(jQuery("html").hasClass('gt-1024')){
-                jQuery(element).children('ul').animate({height:'170px'},{ duration: 400, queue: false });
-            }else{
-                jQuery(element).children('ul').animate({height:'155px'},{ duration: 400, queue: false });
-            }
-            jQuery(element).children('ul > li').animate({opacity:'0.99'},{ duration: 400, queue: false });
-            if(jQuery(element).children('ul').length > 0 ){
-               jQuery('div#page').animate({top:'130px'},{ duration: 400, queue: false });
-               jQuery('footer#colophon').animate({top:'130px'},{ duration: 400, queue: false });
-           }
-        }
+    jQuery('header nav.main-navigation > div > ul.nav-menu > li.menu-item > a').hover(function(){
+        console.log(jQuery(this).next('ul').html());
+        submenu = jQuery(this).next('ul');
+        jQuery('li.menu-item ul.submenu').hide();
+        jQuery(this).next('ul').show();
         
-        
-       
-    });
-    
-    var menuItemWidth = jQuery('html.gt-1024 body header#masthead nav.main-navigation ul li ul.sub-menu li').width();
-    var menuItemHeight = jQuery('html.gt-1024 body header#masthead nav.main-navigation ul li ul.sub-menu li').height();
-    var menuItemLeftMargin = parseInt(jQuery('html.gt-1024 body header#masthead nav.main-navigation ul li ul.sub-menu li').css('marginLeft'));
-    var menuItemRightMargin = parseInt(jQuery('html.gt-1024 body header#masthead nav.main-navigation ul li ul.sub-menu li').css('marginRight'));
-    var menuItemNewMargin = menuItemLeftMargin-(120-menuItemWidth)/2;
-    console.log(menuItemNewMargin);
-    
-    jQuery('html.gt-1024 body header#masthead nav.main-navigation ul li ul.sub-menu li').hover(function(){
-        jQuery(this).animate({
-            width:120,
-            height:154,
-            marginLeft: menuItemNewMargin+'px',
-            marginRight: menuItemNewMargin+'px'
-        },"fast");
     },function(){
-        jQuery(this).animate({
-            width:menuItemWidth,
-            height:menuItemHeight,
-            marginLeft: menuItemLeftMargin+'px',
-            marginRight: menuItemRightMargin+'px'
-        },"fast");
+        return true;
     });
+    jQuery('header').hover(
+        function(){
+            return true;
+        }, function(){
+            console.log('Header loose focus');
+            jQuery(submenu).hide();
+        })
 });
 
 
