@@ -223,3 +223,10 @@ jQuery(window).load(function(){
    jQuery('div.matrix-container div.article-listing').height(maxHeight); //seteo el máximo tamaño de mosaico
 });
 /************************************************************************************************************/
+
+/*************************************LISTADO DE PRODUCTOS***************************************************/
+jQuery(document).ready(function(){
+    jQuery('div.matrix-container div.article-listing').each(function(i){
+        jQuery(this).delay((i++) * 150).fadeTo(1000, 1);
+    });
+});

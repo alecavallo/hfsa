@@ -794,6 +794,7 @@ html.lt-1280 div.herfasa-main-column{
     border-bottom: none;
 }
 div.article-listing{
+    opacity: 0;
     float: left;
     width: 158px;
     min-height: 140px;
@@ -813,8 +814,15 @@ div.article-listing{
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0) 40%, rgba(0, 0, 0, 0.12) 50%, rgba(0, 0, 0, 0.04));
     border-collapse: separate;
 }
+html.lt-1280 div.article-listing{
+    width: 135px
+}
 div.article-listing:hover{
     background-color: rgba(91,24,8,0.7);
+}
+div.article-listing:hover h4{
+    color: #ff5400;
+    text-shadow: 1px 1px 1px #ff4500, 2px 3px 3px #000;
 }
 html.lt-1280 div.article-listing{
     
