@@ -383,7 +383,13 @@ html.lt-1280 body header#masthead nav.main-navigation ul li ul.sub-menu li a{
     font-size: 0.93vw;
 }
 html.lt-1280 body header#masthead nav.main-navigation ul li ul.sub-menu li a img{
+    transition: all 300ms ease-in-out;
+}
+html.lt-1280 body header#masthead nav.main-navigation ul li ul.sub-menu li a img{
     width:85px;
+}
+html.lt-1280 body header#masthead nav.main-navigation ul li ul.sub-menu li:hover a img{
+    width:105px;
 }
 html body header#masthead nav.main-navigation ul li ul.sub-menu li a span{
     font-size: 13pt;
@@ -420,7 +426,11 @@ html body header#masthead nav li.hovered{
 html body header#masthead nav li > a, html body header#masthead nav li a{
     text-shadow: 0px 1px 1px #000
 }
-html body header#masthead nav.main-navigation ul.nav-menu li.menu-item ul.sub-menu li.menu-item:hover a{
+html body header#masthead nav.main-navigation ul.nav-menu li.menu-item ul.sub-menu li.menu-item a span{
+    transition: all 300ms linear;
+}
+html body header#masthead nav.main-navigation ul.nav-menu li.menu-item ul.sub-menu li.menu-item:hover a, html body header#masthead nav.main-navigation ul.nav-menu li.menu-item ul.sub-menu li.menu-item:hover a span{
+    color: #ff4500;
     text-shadow: 0px 1px 0px #000, 0px -2px 10px #ffa661;
 }
 html.rgba body header#masthead nav.main-navigation li.hovered > a, html.rgba body header#masthead nav.main-navigation ul.nav-menu li.menu-item a:hover{
