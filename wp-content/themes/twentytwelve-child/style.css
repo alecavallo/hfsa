@@ -383,7 +383,13 @@ html.lt-1280 body header#masthead nav.main-navigation ul li ul.sub-menu li a{
     font-size: 0.93vw;
 }
 html.lt-1280 body header#masthead nav.main-navigation ul li ul.sub-menu li a img{
+    transition: all 300ms ease-in-out;
+}
+html.lt-1280 body header#masthead nav.main-navigation ul li ul.sub-menu li a img{
     width:85px;
+}
+html.lt-1280 body header#masthead nav.main-navigation ul li ul.sub-menu li:hover a img{
+    width:105px;
 }
 html body header#masthead nav.main-navigation ul li ul.sub-menu li a span{
     font-size: 13pt;
