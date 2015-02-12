@@ -488,11 +488,11 @@ html body article section.left-col{
     border-width: 1pt;*/
 }
 html.lt-1280 body article section.left-col{
-    width: 685px;
-    min-height: 360px;
+    width: 562px;
+    min-height: 538px;
     padding: 20px;
-    margin-bottom: 20px;
-    display: block;
+    /*margin-bottom: 20px;
+    display: block;*/
 }
 html.gt-1024 body article section.left-col {
 width: 630px;
@@ -508,7 +508,7 @@ html.gt-1024 body article section div.sub-col-left{
     width: 285px;
 }
 html.lt-1280 body article section div.sub-col-left{
-    width: 345px;
+    width: 48%;
 }
 html body article section div.sub-col-right{
     float: right;
@@ -518,9 +518,9 @@ html.gt-1024 body article section div.sub-col-right{
     width: 285px;
 }
 html.lt-1280 body article section div.sub-col-right{
-    width: 310px;
-    height: 450px;
-    overflow-y: auto;
+    width: 48%;
+    /*height: 450px;
+    overflow-y: auto;*/
 }
 
 /*NEWS CARROUSEL*/
@@ -542,7 +542,7 @@ html.lt-1280 body article section div.sub-col-right{
 }
 
 html.lt-1280 .jcarousel ul.list-container{
-    width: 345px;
+    width: 100%;
 }
 .jcarousel ul li {
     /* Required only for block elements like <li>'s */
@@ -562,7 +562,7 @@ html.rgba div.jcarousel ul li{
     background-color:rgba(255,255,255,0.1);
 }
 html.lt-1280 div.jcarousel ul li{
-    width: 328px;
+    width: 94%;
 }
 .jcarousel ul li p {
     margin: 3px 0px 5px 0px;
@@ -579,13 +579,14 @@ html.gt-1024 aside{
     margin-right: 8px;
 }
 html.lt-1280 div#secondary{
-    width: 100%;
+    width: 36%;
 }
 html.lt-1280 aside{
     display: block;
-    width: 100%;
-    min-height: 300px;
-    float: left;
+    width: 305px;
+    float: right;
+    margin-right: 8px;
+    position: relative;
 }
 
 /*MAP STYLESHEET*/
@@ -785,7 +786,7 @@ html.rgba div.herfasa-main-column{
     min-height: 672px;
 }
 html.lt-1280 div.herfasa-main-column{
-    width:100%;
+    width:63%;
 }
 
 /*Subpage Article Listing*/
