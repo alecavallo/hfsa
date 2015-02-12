@@ -40,7 +40,7 @@ jQuery(document).ready(function(){
             jQuery(submenu).animate({height:"162px"}, 250);
             jQuery(submenu).animate({width:"840px"}, 100);
         }else{
-            jQuery(submenu).animate({height:"162px"}, 250);
+            jQuery(submenu).animate({height:"177px"}, 250);
             jQuery(submenu).animate({width:"785px"}, 100);
         }
         
