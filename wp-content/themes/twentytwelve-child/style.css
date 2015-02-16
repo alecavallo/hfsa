@@ -317,6 +317,11 @@ html.rgba body header#masthead nav.main-navigation ul.nav-menu li.menu-item ul.s
     left: -68px;
 }
 
+html body header#masthead nav.main-navigation ul li ul.sub-menu li{
+    border: 1px solid rgba(161, 148, 148, 0.7);
+    border-radius: 5px;
+}
+
 html.gt-1024 body header#masthead nav.main-navigation ul li ul.sub-menu li{
     position: relative;
     /*display: inline-table;*/
@@ -328,9 +333,12 @@ html.gt-1024 body header#masthead nav.main-navigation ul li ul.sub-menu li{
     height:151px;
     overflow: hidden;
     padding: 5px 20px;
-    margin: 0px 5px;
     background-color: black;
     /*border-radius: 13px;*/
+}
+html body header#masthead nav.main-navigation ul li ul.sub-menu li{
+    transition: all 300ms ease-in-out;
+    margin: 5px 5px;
 }
 html.lt-1280 body header#masthead nav.main-navigation ul li ul.sub-menu li{
     position: relative;
@@ -340,11 +348,7 @@ html.lt-1280 body header#masthead nav.main-navigation ul li ul.sub-menu li{
     height: 151px;
     overflow: hidden;
     padding: 5px 20px;
-    margin: 5px 5px;
-    background-color: black;
-    border: 1px solid rgba(161, 148, 148, 0.7);
-    border-radius: 5px;
-    transition: all 300ms ease-in-out;
+    background-color: black;  
 }
 html.rgba body header#masthead nav.main-navigation ul li ul.sub-menu li{
     background-color: rgba(10,10,10, 0.3);
@@ -382,13 +386,13 @@ ul.sub-menu li.menu-item a img.wp-post-image{
 html.lt-1280 body header#masthead nav.main-navigation ul li ul.sub-menu li a{
     font-size: 0.93vw;
 }
-html.lt-1280 body header#masthead nav.main-navigation ul li ul.sub-menu li a img{
+html body header#masthead nav.main-navigation ul li ul.sub-menu li a img{
     transition: all 300ms ease-in-out;
 }
-html.lt-1280 body header#masthead nav.main-navigation ul li ul.sub-menu li a img{
+html body header#masthead nav.main-navigation ul li ul.sub-menu li a img{
     width:85px;
 }
-html.lt-1280 body header#masthead nav.main-navigation ul li ul.sub-menu li:hover a img{
+html body header#masthead nav.main-navigation ul li ul.sub-menu li:hover a img{
     width:105px;
 }
 html body header#masthead nav.main-navigation ul li ul.sub-menu li a span{
@@ -808,36 +812,58 @@ html.lt-1280 div.herfasa-main-column{
 .site-content article{
     border-bottom: none;
 }
+div.flex-matrix-container{
+    /*background-color: blue;*/
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    width: 95%;
+    margin: auto;
+    align-items: center;
+}
 div.article-listing{
     opacity: 0;
     float: left;
     width: 158px;
-    min-height: 140px;
+    height: 165px;
     padding: 10px 10px;
     /*box-shadow: 2px 2px 5px 0px rgba(233,233,233,0.34);
     background-color: rgba(255,255,255,0.1);*/
-    margin: 0px 20px 20px 0px;
+    margin: 5px 0px;
     
     
     overflow: hidden;
     background-color: rgba(69, 20, 9, 0.7);
     background-clip: padding-box;
     border: 1px solid;
+    border-left: 0px none;
+    border-right: 0px none;
     border-color: rgb(109, 32, 15) rgba(69, 20, 9, 0.5) rgba(69, 20, 9, 0.7);
-    border-radius: 4px;
+    /*border-radius: 4px;*/
     box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.4), 0 1px 2px rgba(0, 0, 0, 0.2);
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0) 40%, rgba(0, 0, 0, 0.12) 50%, rgba(0, 0, 0, 0.04));
     border-collapse: separate;
+    transition: all 300ms ease-in-out;
 }
+
 html.lt-1280 div.article-listing{
     width: 135px
 }
 div.article-listing:hover{
-    background-color: rgba(91,24,8,0.7);
+    background-color: rgba(51,10,0,0.95);
+    height: 175px;
+    margin: 0px 0px;
+}
+div.article-listing h4{
+    transition: all 300ms ease-in-out;
+    line-height: 19px;
+    color: white;
 }
 div.article-listing:hover h4{
-    color: #ff5400;
-    text-shadow: 1px 1px 1px #ff4500, 2px 3px 3px #000;
+    color: #FFE6DC;
+    text-shadow: 1px 1px 1px #000, 2px 1px 6px #FB865B;
+    font-size: 12px;
+    line-height: 13px;
 }
 html.lt-1280 div.article-listing{
     
@@ -855,7 +881,11 @@ div.article-listing img{
     display: block;
     width: 110px;
     margin: auto;
-    margin-bottom:  4px;
+    margin-bottom:  4px; 
+    transition: all 300ms ease-in-out;
+}
+div.article-listing:hover img{
+    width: 130px;
 }
 article.page > div.entry-content > section > table{
     /*border: 1px solid #ededed;

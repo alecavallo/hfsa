@@ -37,7 +37,7 @@ jQuery(document).ready(function(){
         jQuery(submenu).height(0);
         jQuery(submenu).show();
         if(jQuery('html').hasClass('gt-1024')){
-            jQuery(submenu).animate({height:"162px"}, 250);
+            jQuery(submenu).animate({height:"182px"}, 250);
             jQuery(submenu).animate({width:"840px"}, 100);
         }else{
             jQuery(submenu).animate({height:"177px"}, 250);
@@ -200,7 +200,7 @@ myAud.preload="auto";
 myAud.volume=0.07;*/
 
 /**************************CONTROLAR BLOQUES MOSAICOS DE AVERTURAS********************************************/
-jQuery(window).load(function(){
+/*jQuery(window).load(function(){
    jQuery('div.matrix-container div.article-listing').each(function(index,value){
       var image = jQuery(value).find('img');
       var imageWidth = jQuery(image).width();
@@ -221,7 +221,7 @@ jQuery(window).load(function(){
        }
    });
    jQuery('div.matrix-container div.article-listing').height(maxHeight); //seteo el máximo tamaño de mosaico
-});
+});*/
 /************************************************************************************************************/
 
 /*************************************LISTADO DE PRODUCTOS***************************************************/
