@@ -226,6 +226,25 @@ myAud.volume=0.07;*/
 
 /*************************************LISTADO DE PRODUCTOS***************************************************/
 jQuery(document).ready(function(){
+    jQuery('div.matrix-container div.article-listing img').each(function(index){
+        // Get on screen image
+        var screenImage = jQuery(this);
+
+        // Create new offscreen image to test
+        var theImage = new Image();
+        theImage.src = screenImage.attr("src");
+
+        // Get accurate measurements from that.
+        var imageWidth = theImage.width;
+        var imageHeight = theImage.height;
+        if(imageWidth > imageHeight){
+            jQuery(this).width('100%');
+            jQuery(this).height('auto');
+        }else{
+            jQuery(this).height('75%');
+            jQuery(this).width('auto');
+        }
+    });
     jQuery('div.matrix-container div.article-listing').each(function(i){
         jQuery(this).delay((i++) * 150).fadeTo(1000, 1);
     });

@@ -363,7 +363,8 @@ html body header#masthead nav.main-navigation ul li ul.sub-menu li a{
     width: 117px;
     height: 150px;
     padding: 0px 2px;
-    display: inline-block;
+    display: flex;
+    flex-flow: column nowrap;
     text-align: center;
     /*background-color: black;*/
     background-color: transparent;
@@ -390,10 +391,12 @@ html body header#masthead nav.main-navigation ul li ul.sub-menu li a img{
     transition: all 300ms ease-in-out;
 }
 html body header#masthead nav.main-navigation ul li ul.sub-menu li a img{
-    width:85px;
+    height:100px;
+    width: auto;
 }
 html body header#masthead nav.main-navigation ul li ul.sub-menu li:hover a img{
-    width:105px;
+    height:125px;
+    width: auto;
 }
 html body header#masthead nav.main-navigation ul li ul.sub-menu li a span{
     font-size: 13pt;
@@ -844,6 +847,9 @@ div.article-listing{
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0) 40%, rgba(0, 0, 0, 0.12) 50%, rgba(0, 0, 0, 0.04));
     border-collapse: separate;
     transition: all 300ms ease-in-out;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
 }
 
 html.lt-1280 div.article-listing{
@@ -858,6 +864,7 @@ div.article-listing h4{
     transition: all 300ms ease-in-out;
     line-height: 19px;
     color: white;
+    text-align: center;
 }
 div.article-listing:hover h4{
     color: #FFE6DC;
@@ -881,8 +888,9 @@ div.article-listing img{
     display: block;
     width: 110px;
     margin: auto;
-    margin-bottom:  4px; 
     transition: all 300ms ease-in-out;
+    flex-grow: 0;
+    flex-shrink: 5;
 }
 div.article-listing:hover img{
     width: 130px;
