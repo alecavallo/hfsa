@@ -181,35 +181,50 @@ html.gt-1024 body header#masthead{
     background: transparent url(./img/menu-bkg-02.png) no-repeat;
     background-position-y: top;
     width: 1024px;
-    min-height: 147px;
+    min-height: 112px;
+    margin-top: 5px;
 }
 html.lt-1280 body header#masthead{
-    background: transparent url(./img/menu-bkg-800px2.png) no-repeat;
+    background: transparent url(./img/menu-bkg-02.png) no-repeat;
     background-position-y: top;
-    width: 800px;
-    min-height: 115px;
+    width: 1000px;
+    min-height: 112px;
+    margin-top: 5px;
 }
 html body header#masthead a#logo{
     position: relative;
+    float: left;
 }
 html.gt-1024 body header#masthead a#logo{
-    left: 50px;
-    top: 10px;
+    left: -11px;
+    bottom: 0px;
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+    z-index: 1000;
+    width: 190px;
+    overflow: hidden;
+    float: left;
 }
 html.lt-1280 body header#masthead a#logo{
-    left: -6px;
-    top: 7px;
+    left: 0px;
+    top: 8px;
 }
 html.gt-1024 body header#masthead a#logo img{
-    width: 230px;
+    width: 200px;
+    height: 78px;
+    position: relative;
+    display: block;
+    padding: 0px;
+    margin: 0px;
 }
 html.lt-1280 body header#masthead a#logo img{
-    width: 179px;
+    width: 190px;
 }
 
 html body header#masthead nav{
     display: inline-block;
-    float: right;
+    float: left;
     position: relative;
     font-family: 'Yanone Kaffeesatz', sans-serif;
     font-variant: small-caps;
@@ -219,24 +234,25 @@ html body header#masthead nav{
     margin: 0px;
     top: 59px;
     height:37px;
+    left: 46px;
 }
 html.ie body header#masthead nav, html.ie body header#masthead nav ul li, html.ie body header#masthead nav ul li a{
     font-size: 16px!important;
 }
 html.gt-1024 body header#masthead nav{
-    top: 59px;
+    top: 40px;
     height:37px;
     width: 667px;
     font-size: 17px;
 }
 html.lt-1280 body header#masthead nav{
-    top: 38px;
-    height:42px;
-    width: 557px;
-    font-size: 14px;
-    display: inline-block;
+    top: 40px;
+    height:37px;
+    width: 667px;
+    font-size: 17px!important;
+    /*display: inline-block;
     vertical-align: middle;
-    left:0px;
+    left:0px;*/
     
 }
 html body header#masthead nav ul{
@@ -298,8 +314,24 @@ html.lt-1280 body header#masthead nav.main-navigation ul.nav-menu li.menu-item u
     padding: 3px 5px 5px 5px;
 }
 html.rgba body header#masthead nav.main-navigation ul.nav-menu li.menu-item ul.sub-menu{
-    background-color: rgba(255,255,255, 0.1);
-    border-radius: 0px 0px 5px 5px;
+    /*background-color: rgba(255,255,255, 0.1);*/
+    background: -webkit-linear-gradient(to bottom, rgba(73, 73, 73, 0.95) 7%, rgba(43, 43, 43, 1) 30%, rgba(0,0,0,1)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(to bottom, rgba(73, 73, 73, 0.95) 7%, rgba(43, 43, 43, 1) 30%, rgba(0,0,0,1)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(to bottom, rgba(73, 73, 73, 0.95) 7%, rgba(43, 43, 43, 1) 30%, rgba(0,0,0,1)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom, rgba(73, 73, 73, 0.95) 7%, rgba(43, 43, 43, 1) 30%, rgba(0,0,0,1)); /* Standard syntax */
+    border-radius: 0px 0px 5px 0px;
+    border-left: 15px solid rgb(0,0,0);
+    box-shadow: 1px 1px 4px -2px #FF9C77, 2px 3px 6px 2px rgba(98, 98, 98, 0.6);
+    width:840px;
+    height: 162px;
+    position: absolute;
+    top:35px;
+    left: -68px;
+}
+
+html body header#masthead nav.main-navigation ul li ul.sub-menu li{
+    border: 1px solid rgba(161, 148, 148, 0.7);
+    border-radius: 5px;
 }
 
 html.gt-1024 body header#masthead nav.main-navigation ul li ul.sub-menu li{
@@ -313,27 +345,28 @@ html.gt-1024 body header#masthead nav.main-navigation ul li ul.sub-menu li{
     height:151px;
     overflow: hidden;
     padding: 5px 20px;
-    margin: 0px 5px;
     background-color: black;
-    border-radius: 13px;
+    /*border-radius: 13px;*/
+}
+html body header#masthead nav.main-navigation ul li ul.sub-menu li{
+    transition: all 300ms ease-in-out;
+    margin: 5px 5px;
 }
 html.lt-1280 body header#masthead nav.main-navigation ul li ul.sub-menu li{
     position: relative;
     display: block;
     float: left;
-    width: 100px;
-    height: 160px;
+    width: 117px;
+    height: 151px;
     overflow: hidden;
     padding: 5px 20px;
-    margin: 0px 5px;
-    background-color: black;
-    border-radius: 13px;
+    background-color: black;  
 }
 html.rgba body header#masthead nav.main-navigation ul li ul.sub-menu li{
-    background-color: rgba(0,0,0, 0.1);
+    background-color: rgba(10,10,10, 0.3);
 }
 html.rgba body header#masthead nav.main-navigation ul li ul.sub-menu li:hover{
-    background-color: rgba(0,0,0, 0.3);
+   background-color: rgba(0,0,0, 0.6);
 }
 
 html body header#masthead nav.main-navigation ul li ul.sub-menu li a{
@@ -343,6 +376,8 @@ html body header#masthead nav.main-navigation ul li ul.sub-menu li a{
     height: 150px;
     padding: 0px 2px;
     display: inline-block;
+    /*display: flex;
+    flex-flow: column nowrap;*/
     text-align: center;
     /*background-color: black;*/
     background-color: transparent;
@@ -355,6 +390,7 @@ html body header#masthead nav.main-navigation ul li ul.sub-menu li a{
     font-size: 17px;
     border: 0;
     vertical-align: middle;
+    transition: all 300ms ease-in-out;
 }
 ul.sub-menu li.menu-item a img.wp-post-image{
     clear: both;
@@ -364,8 +400,14 @@ ul.sub-menu li.menu-item a img.wp-post-image{
 html.lt-1280 body header#masthead nav.main-navigation ul li ul.sub-menu li a{
     font-size: 0.93vw;
 }
-html.lt-1280 body header#masthead nav.main-navigation ul li ul.sub-menu li a img{
-    width:85px;
+html body header#masthead nav.main-navigation ul li ul.sub-menu li a img{
+    transition: all 300ms ease-in-out;
+}
+html body header#masthead nav.main-navigation ul li ul.sub-menu li a img{
+    width: 85px;
+}
+html body header#masthead nav.main-navigation ul li ul.sub-menu li:hover a img{
+    width:105px;
 }
 html body header#masthead nav.main-navigation ul li ul.sub-menu li a span{
     font-size: 13pt;
@@ -390,7 +432,7 @@ html body header#masthead nav.main-navigation ul.nav-menu > li.menu-item > a{
     text-decoration: none;
     display: inline-block;
     padding: 1px 3px;
-    height: 24px;
+    height: 28px;
     font-size: inherit;
     text-transform: none;
     line-height: 32px;
@@ -402,9 +444,21 @@ html body header#masthead nav li.hovered{
 html body header#masthead nav li > a, html body header#masthead nav li a{
     text-shadow: 0px 1px 1px #000
 }
-html body header#masthead nav li.hovered > a, html body header#masthead nav li a:hover{
-    text-shadow: 0px 2px 1px #000, 0px 1px 17px #fff;
+html body header#masthead nav.main-navigation ul.nav-menu li.menu-item ul.sub-menu li.menu-item a span{
+    transition: all 300ms linear;
 }
+html body header#masthead nav.main-navigation ul.nav-menu li.menu-item ul.sub-menu li.menu-item:hover a, html body header#masthead nav.main-navigation ul.nav-menu li.menu-item ul.sub-menu li.menu-item:hover a span{
+    color: #ff4500;
+    text-shadow: 0px 1px 0px #000, 0px -2px 10px #ffa661;
+}
+html.rgba body header#masthead nav.main-navigation li.hovered > a, html.rgba body header#masthead nav.main-navigation ul.nav-menu li.menu-item a:hover{
+    background: -o-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.3));
+    background: -moz-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.3));
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.3));
+    /*font-size: 1.2em;
+    letter-spacing: 0.9px;*/
+}
+
 html.gt-1024 body header#masthead > nav > ul > li > a{
     height: 32px;
 }
@@ -441,10 +495,11 @@ html.gt-1024 body div#page{
     margin-top: 5px;
 }
 html.lt-1280 body div#page{
-    width: 735px;
+    width: 979px;
     min-height: 300px;
-    padding: 20px 20px;
-    margin-bottom: 40px;    
+    padding: 0px 20px;
+    margin-bottom: 40px;
+    margin-top: 5px;
     //top: -24px;
 }
 html section#carrousel-section{
@@ -453,7 +508,7 @@ html section#carrousel-section{
 }
 html.lt-1280 section#carrousel-section{
     margin-bottom: 14px;
-    width: 726px;
+    width: 895px;
 }
 html div.ms-slide-info{
     color: white;
@@ -470,11 +525,11 @@ html body article section.left-col{
     border-width: 1pt;*/
 }
 html.lt-1280 body article section.left-col{
-    width: 685px;
-    min-height: 360px;
+    width: 562px;
+    min-height: 538px;
     padding: 20px;
-    margin-bottom: 20px;
-    display: block;
+    /*margin-bottom: 20px;
+    display: block;*/
 }
 html.gt-1024 body article section.left-col {
 width: 630px;
@@ -490,7 +545,7 @@ html.gt-1024 body article section div.sub-col-left{
     width: 285px;
 }
 html.lt-1280 body article section div.sub-col-left{
-    width: 345px;
+    width: 48%;
 }
 html body article section div.sub-col-right{
     float: right;
@@ -500,9 +555,9 @@ html.gt-1024 body article section div.sub-col-right{
     width: 285px;
 }
 html.lt-1280 body article section div.sub-col-right{
-    width: 310px;
-    height: 450px;
-    overflow-y: auto;
+    width: 48%;
+    /*height: 450px;
+    overflow-y: auto;*/
 }
 
 /*NEWS CARROUSEL*/
@@ -524,7 +579,7 @@ html.lt-1280 body article section div.sub-col-right{
 }
 
 html.lt-1280 .jcarousel ul.list-container{
-    width: 345px;
+    width: 100%;
 }
 .jcarousel ul li {
     /* Required only for block elements like <li>'s */
@@ -544,7 +599,7 @@ html.rgba div.jcarousel ul li{
     background-color:rgba(255,255,255,0.1);
 }
 html.lt-1280 div.jcarousel ul li{
-    width: 328px;
+    width: 94%;
 }
 .jcarousel ul li p {
     margin: 3px 0px 5px 0px;
@@ -561,13 +616,14 @@ html.gt-1024 aside{
     margin-right: 8px;
 }
 html.lt-1280 div#secondary{
-    width: 100%;
+    width: 36%;
 }
 html.lt-1280 aside{
     display: block;
-    width: 100%;
-    min-height: 300px;
-    float: left;
+    width: 305px;
+    float: right;
+    margin-right: 8px;
+    position: relative;
 }
 
 /*MAP STYLESHEET*/
@@ -767,35 +823,69 @@ html.rgba div.herfasa-main-column{
     min-height: 672px;
 }
 html.lt-1280 div.herfasa-main-column{
-    width:100%;
+    width:63%;
 }
 
 /*Subpage Article Listing*/
 .site-content article{
     border-bottom: none;
 }
+div.flex-matrix-container{
+    /*background-color: blue;*/
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    width: 95%;
+    margin: auto;
+    align-items: center;
+}
 div.article-listing{
+    opacity: 0;
     float: left;
     width: 158px;
-    min-height: 140px;
+    height: 165px;
     padding: 10px 10px;
     /*box-shadow: 2px 2px 5px 0px rgba(233,233,233,0.34);
     background-color: rgba(255,255,255,0.1);*/
-    margin: 0px 20px 20px 0px;
+    margin: 5px 0px;
     
     
     overflow: hidden;
     background-color: rgba(69, 20, 9, 0.7);
     background-clip: padding-box;
     border: 1px solid;
+    border-left: 0px none;
+    border-right: 0px none;
     border-color: rgb(109, 32, 15) rgba(69, 20, 9, 0.5) rgba(69, 20, 9, 0.7);
-    border-radius: 4px;
+    /*border-radius: 4px;*/
     box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.4), 0 1px 2px rgba(0, 0, 0, 0.2);
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0) 40%, rgba(0, 0, 0, 0.12) 50%, rgba(0, 0, 0, 0.04));
     border-collapse: separate;
+    transition: all 300ms ease-in-out;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+
+html.lt-1280 div.article-listing{
+    width: 135px
 }
 div.article-listing:hover{
-    background-color: rgba(91,24,8,0.7);
+    background-color: rgba(51,10,0,0.95);
+    height: 175px;
+    margin: 0px 0px;
+}
+div.article-listing h4{
+    transition: all 300ms ease-in-out;
+    line-height: 19px;
+    color: white;
+    text-align: center;
+}
+div.article-listing:hover h4{
+    color: #FFE6DC;
+    text-shadow: 1px 1px 1px #000, 2px 1px 6px #FB865B;
+    font-size: 12px;
+    line-height: 13px;
 }
 html.lt-1280 div.article-listing{
     
@@ -813,7 +903,12 @@ div.article-listing img{
     display: block;
     width: 110px;
     margin: auto;
-    margin-bottom:  4px;
+    transition: all 300ms ease-in-out;
+    flex-grow: 0;
+    flex-shrink: 5;
+}
+div.article-listing:hover img{
+    width: 130px;
 }
 article.page > div.entry-content > section > table{
     /*border: 1px solid #ededed;
@@ -867,6 +962,17 @@ html.rgba article.format-aside .aside, html.rgba article.post > .entry-content {
     background: rgba(233,233,233,0.10);
     box-shadow: 1px 1px 5px 0px rgba(233,233,233,0.34);
     border-left: 22px solid rgba(255, 84, 0, 0.45);
+}
+html.gt-1024 div#related-pages{
+    width: 175px;
+    padding: 32px 10px 10px 10px;
+    position: relative;
+    float: left;
+    margin-right: 15px;
+}
+html.gt-1024 div#content.narrow-content{
+    width: 391px;
+    float: left;
 }
 div#primary > div#content > article.format-aside > div.aside{
     width: 87%;
