@@ -38,10 +38,10 @@ jQuery(document).ready(function(){
         jQuery(submenu).show();
         if(jQuery('html').hasClass('gt-1024')){
             jQuery(submenu).animate({height:"182px"}, 250);
-            jQuery(submenu).animate({width:"840px"}, 100);
+            jQuery(submenu).animate({width:"840px"}, 200);
         }else{
             jQuery(submenu).animate({height:"177px"}, 250);
-            jQuery(submenu).animate({width:"785px"}, 100);
+            jQuery(submenu).animate({width:"785px"}, 200);
         }
         
         

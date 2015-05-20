@@ -196,15 +196,27 @@ html body header#masthead a#logo{
     float: left;
 }
 html.gt-1024 body header#masthead a#logo{
-    left: 0px;
-    top: 8px;
+    left: -11px;
+    bottom: 0px;
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+    z-index: 1000;
+    width: 190px;
+    overflow: hidden;
+    float: left;
 }
 html.lt-1280 body header#masthead a#logo{
     left: 0px;
     top: 8px;
 }
 html.gt-1024 body header#masthead a#logo img{
-    width: 190px;
+    width: 200px;
+    height: 78px;
+    position: relative;
+    display: block;
+    padding: 0px;
+    margin: 0px;
 }
 html.lt-1280 body header#masthead a#logo img{
     width: 190px;
@@ -440,7 +452,11 @@ html body header#masthead nav.main-navigation ul.nav-menu li.menu-item ul.sub-me
     text-shadow: 0px 1px 0px #000, 0px -2px 10px #ffa661;
 }
 html.rgba body header#masthead nav.main-navigation li.hovered > a, html.rgba body header#masthead nav.main-navigation ul.nav-menu li.menu-item a:hover{
-    
+    background: -o-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.3));
+    background: -moz-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.3));
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.3));
+    /*font-size: 1.2em;
+    letter-spacing: 0.9px;*/
 }
 
 html.gt-1024 body header#masthead > nav > ul > li > a{
@@ -946,6 +962,17 @@ html.rgba article.format-aside .aside, html.rgba article.post > .entry-content {
     background: rgba(233,233,233,0.10);
     box-shadow: 1px 1px 5px 0px rgba(233,233,233,0.34);
     border-left: 22px solid rgba(255, 84, 0, 0.45);
+}
+html.gt-1024 div#related-pages{
+    width: 175px;
+    padding: 32px 10px 10px 10px;
+    position: relative;
+    float: left;
+    margin-right: 15px;
+}
+html.gt-1024 div#content.narrow-content{
+    width: 391px;
+    float: left;
 }
 div#primary > div#content > article.format-aside > div.aside{
     width: 87%;
