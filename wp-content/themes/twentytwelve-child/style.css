@@ -963,16 +963,22 @@ html.rgba article.format-aside .aside, html.rgba article.post > .entry-content {
     box-shadow: 1px 1px 5px 0px rgba(233,233,233,0.34);
     border-left: 22px solid rgba(255, 84, 0, 0.45);
 }
-html.gt-1024 div#related-pages{
+div#related-pages{
     width: 175px;
     padding: 32px 10px 10px 10px;
     position: relative;
     float: left;
     margin-right: 15px;
 }
+div.narrow-content{
+    float: left;
+}
+html.lt-1280 div#content.narrow-content{
+    width: 321px;
+}
 html.gt-1024 div#content.narrow-content{
     width: 391px;
-    float: left;
+    
 }
 div#primary > div#content > article.format-aside > div.aside{
     width: 87%;
@@ -1039,4 +1045,15 @@ footer[role="contentinfo"] a{
 /*MASTER SLIDER */
 .ms-parent-id-1>.master-slider{
     /*background: #1a1a1a;*/
+}
+
+/* BREADCRUMBS*/
+div.breadcrumbs{
+  color: rgba(253, 251, 250, 0.45);
+  /*margin: 3px 0px;*/
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+}
+div.breadcrumbs span{
+    line-height: 16px;
 }
