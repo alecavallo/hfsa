@@ -1057,3 +1057,10 @@ div.breadcrumbs{
 div.breadcrumbs span{
     line-height: 16px;
 }
+
+/*SINGLE POSTS*/
+body.single-post div#primary {
+  background-color: rgba(66,14,14,0.68);
+  display: block;
+  box-shadow: 2px 3px 9px 1px #44120c;
+}
